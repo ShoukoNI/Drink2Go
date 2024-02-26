@@ -1,0 +1,16 @@
+@use "./global/variables.scss" as v;
+
+.slider {
+  position: relative;
+
+}
+
+.slider__item {
+  display: none;
+  transition: transform 0.5s ease;
+}
+
+.slider__item--active {
+  display: block;
+}
+

@@ -1,0 +1,15 @@
+@use "./global/variables.scss" as v;
+
+.hero__divider {
+  display: none;
+  background-color: v.$base-white;
+
+  @media (min-width: v.$tablet-width) {
+    display: block;
+    height: 188px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: none;
+  }
+}

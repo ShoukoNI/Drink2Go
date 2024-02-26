@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Drink2Go</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Drink2Go - Интернет-магазин кофейных напитков</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -19,7 +20,7 @@
         <picture>
           <source media="(min-width: 1440px)" width="170" height="36" srcset="images/logo-long.svg">
           <source media="(min-width: 768px)" width="82" height="36" srcset="images/logo-short.svg">
-          <img src="images/logo-symbol.svg" width="32" height="36" loading="lazy" alt="логотип Drink to Go.">
+          <img src="images/logo-symbol.svg" width="32" height="36" alt="логотип Drink to Go.">
         </picture>
         <span class="site-nav__desc">Интернет-магазин
           кофейных напитков</span>
@@ -70,7 +71,136 @@
   </header>
   <main>
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink to Go.</h1>
-    <section class="hero" data-test="hero"></section>
+    <section class="hero" data-test="hero">
+      <h2 class="visually-hidden">Наши акционные предложения.</h2>
+      <div class="hero__promo slider">
+        <div class="slider__item slide slider__item--active slide--flat-white">
+          <div class="slide__content">
+            <div class="slide__header">
+              <h3 class="slide__title">Декаф Флэт Уайт</h3>
+              <span class="slide__cap">Новинка!</span>
+            </div>
+            <div class="slide__img-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" width="600" height="600" srcset="
+                images/slider/flat-white-desktop@1x.webp 1x,
+                images/slider/flat-white-desktop@2x.webp 2x
+              ">
+                <source media="(min-width: 768px)" type="image/webp" width="476" height="476" srcset="
+                images/slider/flat-white-tablet@1x.webp 1x,
+                images/slider/flat-white-tablet@2x.webp 2x
+                  ">
+                <source type="image/webp" width="280" height="280" srcset="
+                images/slider/flat-white-mobile@1x.webp 1x,
+                images/slider/flat-white-mobile@2x.webp 2x
+                  ">
+                <source media="(min-width: 1440px)" width="600" height="600" srcset="
+                images/slider/flat-white-desktop@1x.png 1x,
+                images/slider/flat-white-desktop@2x.png 2x
+                  ">
+                <source media="(min-width: 768px)" width="476" height="476" srcset="
+                  images/slider/flat-white-tablet@1x.png 1x,
+                  images/slider/flat-white-tablet@2x.png 2x
+                  ">
+                <img class="slide__img" src="images/slider/flat-white-mobile@1x.png" width="280" height="280"
+                  srcset="images/slider/flat-white-mobile@2x.png 2x" alt="Баночка кофе Декаф Флэт Уайт.">
+              </picture>
+            </div>
+            <p class="slide__desc">Свежесваренный кофе без кофеина из Эфиопии<br> с натуральным фермерским молоком — то,
+              что
+              нужно<br> для расслабления после тяжёлого рабочего дня</p>
+            <div class="slide__special-offer">
+              <span class="slide__old-price">295₽</span>
+              <span class="slide__sppecial-price">225₽</span>
+              <button class="slide__order-btn">Заказать</button>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item slide slide--lavender-latte">
+          <div class="slide__content">
+            <div class="slide__header">
+              <h3 class="slide__title">Лавандовый Латте</h3>
+              <span class="slide__cap">Новинка!</span>
+            </div>
+            <div class="slide__img-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" width="600" height="600" srcset="
+              images/slider/lavender-desktop@1x.webp 1x,
+              images/slider/lavender-desktop@2x.webp 2x
+            ">
+                <source media="(min-width: 768px)" type="image/webp" width="476" height="476" srcset="
+              images/slider/lavender-tablet@1x.webp 1x,
+              images/slider/lavender-tablet@2x.webp 2x
+                ">
+                <source type="image/webp" width="280" height="280" srcset="
+              images/slider/lavender-mobile@1x.webp 1x,
+              images/slider/lavender-mobile@2x.webp 2x
+                ">
+                <source media="(min-width: 1440px)" width="600" height="600" srcset="
+              images/slider/lavender-desktop@1x.png 1x,
+              images/slider/lavender-desktop@2x.png 2x
+                ">
+                <source media="(min-width: 768px)" width="476" height="476" srcset="
+                images/slider/lavender-tablet@1x.png 1x,
+                images/slider/lavender-tablet@2x.png 2x
+                ">
+                <img class="slide__img" src="images/slider/lavender-mobile@1x.png" width="280" height="280"
+                  srcset="images/slider/lavender-mobile@2x.png 2x" alt="Баночка кофе Лавандовый Латте.">
+              </picture>
+            </div>
+            <p class="slide__desc">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым
+              сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class="slide__special-offer">
+              <span class="slide__old-price">285₽</span>
+              <span class="slide__sppecial-price">265₽</span>
+              <button class="slide__order-btn">Заказать</button>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item slide slide--espresso">
+          <div class="slide__content">
+            <div class="slide__header">
+              <h3 class="slide__title">Тройной Эспрессо</h3>
+              <span class="slide__cap">Новинка!</span>
+            </div>
+            <div class="slide__img-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" width="600" height="600" srcset="
+              images/slider/espresso-desktop@1x.webp 1x,
+              images/slider/espresso-desktop@2x.webp 2x
+            ">
+                <source media="(min-width: 768px)" type="image/webp" width="476" height="476" srcset="
+              images/slider/espresso-tablet@1x.webp 1x,
+              images/slider/espresso-tablet@2x.webp 2x
+                ">
+                <source type="image/webp" width="280" height="280" srcset="
+              images/slider/espresso-mobile@1x.webp 1x,
+              images/slider/espresso-mobile@2x.webp 2x
+                ">
+                <source media="(min-width: 1440px)" width="600" height="600" srcset="
+              images/slider/espresso-desktop@1x.png 1x,
+              images/slider/espresso-desktop@2x.png 2x
+                ">
+                <source media="(min-width: 768px)" width="476" height="476" srcset="
+                images/slider/espresso-tablet@1x.png 1x,
+                images/slider/espresso-tablet@2x.png 2x
+                ">
+                <img class="slide__img" src="images/slider/espresso-mobile@1x.png" width="280" height="280"
+                  srcset="images/slider/espresso-mobile@2x.png 2x" alt="Баночка кофе Тройной Эспрессо.">
+              </picture>
+            </div>
+            <p class="slide__desc">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии
+              покажет вам, что такое настоящая бодрость</p>
+            <div class="slide__special-offer">
+              <span class="slide__old-price">395₽</span>
+              <span class="slide__sppecial-price">375₽</span>
+              <button class="slide__order-btn">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__divider"></div>
+    </section>
     <section class="features" data-test="features">
       <div class="features__container">
         <header class="features__header section-header">

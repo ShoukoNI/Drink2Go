@@ -18,7 +18,7 @@
 .site-nav__logo {
   margin: 12px 20px;
   width: 32px;
-  min-height: 36px;
+  line-height: 0;
 
   @media (min-width: v.$tablet-width) {
     margin: 22px 7px 22px 0;
