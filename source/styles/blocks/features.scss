@@ -1,0 +1,167 @@
+@use "./global/variables.scss" as v;
+
+.features {
+  background-color: v.$base-white;
+}
+
+.features__container {
+  margin: 0 auto;
+  padding: 50px 20px 60px;
+  width: v.$mobile-width;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 60px 20px 100px;
+    width: v.$tablet-width;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 100px 40px 120px;
+    width: v.$desktop-width;
+  }
+}
+
+.features__header {
+  margin-bottom: 36px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+
+  @media (min-width: v.$tablet-width) {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 30px;
+    text-align: left;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+  }
+}
+
+.features__item {
+  position: relative;
+  padding-top: 66px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 56px;
+    width: 52px;
+    content: '';
+    background-position: center;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding-top: 0;
+    padding-left: 72px;
+
+    &::before {
+      right: unset;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-top: 76px;
+    padding-left: 0;
+
+    &::before {
+      right: 0;
+      margin: 0 auto
+    }
+  }
+}
+
+.features__item--stopwatch {
+  &::before {
+    background-image: url('../../images/icons/stack.svg#stopwatch');
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &::before {
+      top: 4px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    &::before {
+      top: 0;
+    }
+  }
+}
+
+.features__item--pocket {
+  &::before {
+    background-image: url('../../images/icons/stack.svg#pocket');
+  }
+}
+
+.features__item--lightning {
+  &::before {
+    background-image: url('../../images/icons/stack.svg#lightning');
+  }
+}
+
+.features__item--leaf {
+  &::before {
+    background-image: url('../../images/icons/stack.svg#leaf');
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &::before {
+      top: 4px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    &::before {
+      top: 0;
+    }
+  }
+}
+
+.features__name {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 32px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.features__desc {
+  margin: 0;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

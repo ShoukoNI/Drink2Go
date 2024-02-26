@@ -69,10 +69,73 @@
     </nav>
   </header>
   <main>
+    <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink to Go.</h1>
     <section class="hero" data-test="hero"></section>
-    <section class="features" data-test="features"></section>
-    <section class="catalog" data-test="catalog"></section>
-    <section class="map" data-test="map"></section>
+    <section class="features" data-test="features">
+      <div class="features__container">
+        <header class="features__header section-header">
+          <h2 class="section-header__title">Главные причины выбрать Drink2Go</h2>
+          <span class="section-header__cap">Преимущества</span>
+        </header>
+        <ul class="features__list">
+          <li class="features__item features__item--stopwatch">
+            <h3 class="features__name">Скорость</h3>
+            <p class="features__desc">Готовый напиток всегда под рукой — просто открой банку</p>
+          </li>
+          <li class="features__item features__item--pocket">
+            <h3 class="features__name">Удобство</h3>
+            <p class="features__desc">Легко помещается и в карман,<br>
+              и в маленькую сумочку</p>
+          </li>
+          <li class="features__item features__item--lightning">
+            <h3 class="features__name">Бодрость</h3>
+            <p class="features__desc">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          </li>
+          <li class="features__item features__item--leaf">
+            <h3 class="features__name">Экологичность</h3>
+            <p class="features__desc">Вся упаковка сделана
+              <br>
+              из перерабатываемых материалов
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="catalog" data-test="catalog">
+      <div class="catalog__container">
+        <header class="features__header section-header">
+          <h2 class="section-header__title">Каталог кофейных напитков</h2>
+          <span class="section-header__cap">Каталог</span>
+        </header>
+      </div>
+    </section>
+    <section class="map" data-test="map">
+      <h2 class="visually-hidden">Мы на карте.</h2>
+      <picture>
+        <source media="(min-width: 1440px)" type="image/webp" width="1440" height="540" srcset="
+        images/map-big@1x.webp 1x,
+        images/map-big@2x.webp 2x
+      ">
+        <source media="(min-width: 768px)" type="image/webp" width="768" height="480" srcset="
+          images/map-medium@1x.webp 1x,
+          images/map-medium@2x.webp 2x
+          ">
+        <source type="image/webp" width="320" height="420" srcset="
+          images/map-small@1x.webp 1x,
+          images/map-small@2x.webp 2x
+          ">
+        <source media="(min-width: 1440px)" width="1440" height="540" srcset="
+          images/map-big@1x.png 1x,
+          images/map-big@2x.png 2x
+          ">
+        <source media="(min-width: 768px)" width="768" height="480" srcset="
+          images/map-medium@1x.png 1x,
+          images/map-medium@2x.png 2x
+          ">
+        <img class="map__image" src="images/map-small@1x.png" width="320" height="420" loading="lazy"
+          srcset="images/map-small@2x.png 2x" alt="Карта на которой отмечен наш офис">
+      </picture>
+    </section>
   </main>
   <footer class="footer" data-test="footer">
     <div class="footer__container">
@@ -86,7 +149,7 @@
           </picture>
         </a>
         <span class="social__desc">Интернет-магазин
-            кофейных напитков</span>
+          кофейных напитков</span>
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link" href="https://vk.com/htmlacademy">
@@ -138,8 +201,10 @@
         </div>
       </div>
       <div class="footer__copyright copyright">
-        <p class="copyright__text">Разработано в<a class="copyright__link" href="https://htmlacademy.ru/">HTML
-            Academy<svg class="copyright__icon" width="12" height="16" fill="#BDBDBD" aria-hidden="true" focusable="false">
+        <p class="copyright__text">Разработано в<a class="copyright__link"
+            href="https://htmlacademy.ru/intensive/adaptive">HTML
+            Academy<svg class="copyright__icon" width="12" height="16" fill="#BDBDBD" aria-hidden="true"
+              focusable="false">
               <use href="images/icons/stack.svg#HTML-Academy-logo"></use>
             </svg></a></p>
       </div>

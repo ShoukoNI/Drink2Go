@@ -1,0 +1,28 @@
+@use "./global/variables.scss" as v;
+
+.section-header {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+}
+
+.section-header__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 36px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}
+
+.section-header__cap {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  color: v.$base-primary;
+}
