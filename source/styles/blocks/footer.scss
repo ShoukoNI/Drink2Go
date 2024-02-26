@@ -1,0 +1,54 @@
+@use "./global/variables.scss" as v;
+
+.footer {
+  background-color: v.$base-white;
+}
+
+.footer__container {
+  margin: 0 auto;
+  width: v.$mobile-width;
+
+  @media (min-width: v.$tablet-width) {
+    width: v.$tablet-width;
+    padding: 40px 20px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: v.$desktop-width;
+    padding: 40px;
+  }
+}
+
+
+.footer__social {
+  border-bottom: 1px solid v.$base-secondary;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 30px;
+    border-bottom: none;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 318px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+  }
+}
+
+.footer__nav {
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__copyright {
+  @media (min-width: v.$desktop-width) {
+    width: 100%;
+  }
+}

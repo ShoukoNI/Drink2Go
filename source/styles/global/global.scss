@@ -1,1 +1,30 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+
+@use "./global/variables.scss" as v;
+
+html,
+body,
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  font-family: v.$main-font;
+  font-size: 14px;
+  line-height: 20px;
+  color: v.$base-black;
+  background-color: v.$base-white;
+
+  @media screen and (min-width: v.$mobile-width) {
+    overflow-x: hidden;
+  }
+}
+
+main {
+  flex: 1;
+}

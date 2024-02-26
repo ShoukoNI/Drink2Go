@@ -1,0 +1,58 @@
+@use "./global/variables.scss" as v;
+
+.contacts {
+  padding: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: v.$base-primary;
+  letter-spacing: 0.28px;
+}
+
+.contacts__info {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding-left: 19px;
+  text-decoration: none;
+  font-style: normal;
+  font-family: v.$main-font;
+  color: v.$base-black;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    content: '';
+  }
+}
+
+.contacts__info--adress {
+  margin-bottom: 16px;
+
+  &::before {
+    background-image: url('../../images/icons/stack.svg#address');
+  }
+}
+
+.contacts__info--tel {
+  &::before {
+    background-image: url('../../images/icons/stack.svg#phone');
+  }
+
+  &:hover {
+    color: v.$alt-primary-lighter;
+  }
+
+  &:active {
+    color: v.$alt-primary-darker;
+  }
+}

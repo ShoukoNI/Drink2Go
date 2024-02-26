@@ -1,0 +1,81 @@
+@use "./global/variables.scss" as v;
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+
+  @media (min-width: v.$desktop-width) {
+    gap: 20px;
+  }
+}
+
+.menu-list__item {
+  &:last-child {
+    @media (min-width: v.$tablet-width) {
+      display: none;
+    }
+  }
+
+}
+
+.menu-list__button {
+  display: block;
+  padding: 22px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: v.$base-white;
+  cursor: pointer;
+
+  &:hover .menu-list__icon {
+    fill: v.$base-primary;
+  }
+
+  &:active {
+    background-color: v.$base-secondary;
+
+    .menu-list__icon {
+      fill: v.$base-black;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 32 22px;
+    height: 80px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: flex;
+    gap: 8px;
+    padding: 32px 20px;
+    width: unset;
+
+    &:hover {
+      color: v.$base-primary;
+    }
+
+    &:active  {
+      color: v.$base-primary;
+
+      .menu-list__icon {
+        fill: v.$base-primary;
+      }
+    }
+  }
+}
+
+.menu-list__desc {
+  display: none;
+  font-family: v.$main-font;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+
+  @media (min-width: v.$desktop-width) {
+    display: block;
+  }
+}

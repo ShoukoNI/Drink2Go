@@ -1,0 +1,49 @@
+@use "./global/variables.scss" as v;
+
+.media {
+  padding: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0;
+  }
+}
+
+.media__title {
+  margin: 0;
+  margin-bottom: 12px;
+  color: v.$base-primary;
+  letter-spacing: 0.28px;
+}
+
+.media__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.media__item {
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.media__link {
+  display: inline-block;
+  padding: 8px 0;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  color: v.$base-black;
+
+  &:hover {
+    color: v.$alt-primary-lighter;
+  }
+
+  &:active {
+    color: v.$alt-primary-darker;
+  }
+}
+

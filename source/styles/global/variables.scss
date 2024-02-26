@@ -1,1 +1,19 @@
-/* здесь используйте глобальные переменные */
+// Viewports
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// Fonts
+$main-font: "Montserrat", sans-serif;
+
+// Base Colors
+$base-white:  #FFFFFF;
+$base-grey: #BDBDBD;
+$base-black:  #333333;
+$base-primary:  #7859CF;
+$base-secondary:  #F0EBFF;
+
+// Alt Colors
+$alt-primary-opacity: rgba(120, 89, 207, 0.25);
+$alt-primary-lighter: #9070EC;
+$alt-primary-darker: #593CAC;

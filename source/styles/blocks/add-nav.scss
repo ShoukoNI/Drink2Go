@@ -1,0 +1,55 @@
+@use "./global/variables.scss" as v;
+
+.add-nav {
+
+  &__online-store,
+  &__media,
+  &__contacts {
+    border-bottom: 1px solid v.$base-secondary;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    display: flex;
+    gap: 30px;
+
+    &__online-store,
+    &__media,
+    &__contacts {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-top: 9px;
+  }
+}
+
+.add-nav__online-store {
+  @media (min-width: v.$tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 317px;
+  }
+}
+
+.add-nav__media {
+  @media (min-width: v.$tablet-width) {
+    width: 222px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 318px;
+  }
+}
+
+.add-nav__contacts {
+  @media (min-width: v.$tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 317px;
+  }
+}

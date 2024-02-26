@@ -1,0 +1,44 @@
+@use "./global/variables.scss" as v;
+
+.copyright {
+  padding: 20px 20px 30px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__text {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: v.$base-grey;
+}
+
+.copyright__link {
+  display: inline-flex;
+  margin-left: 3px;
+  text-decoration: none;
+  color: v.$base-grey;
+
+  &:hover {
+    color: v.$base-primary;
+
+    .copyright__icon {
+      fill: v.$base-primary;
+    }
+  }
+
+  &:active {
+    color: v.$alt-primary-darker;
+
+    .copyright__icon {
+      fill: v.$alt-primary-darker;
+    }
+  }
+}
+
+.copyright__icon {
+  margin-left: 4px;
+}
