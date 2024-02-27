@@ -1,0 +1,27 @@
+@use "./global/variables.scss" as v;
+
+
+.button {
+  padding: 8px 20px;
+  font-family: v.$main-font;
+  font-size: 16px;
+  line-height: 24px;
+  color: v.$base-white;
+  background-color: v.$base-primary;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: v.$alt-primary-lighter;
+  }
+
+  &:active {
+    background-color: v.$alt-primary-darker;
+  }
+
+  &:disabled {
+    background-color: v.$base-grey;
+  }
+}

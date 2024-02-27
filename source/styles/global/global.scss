@@ -2,9 +2,9 @@
 
 @use "./global/variables.scss" as v;
 
-html,
-body,
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

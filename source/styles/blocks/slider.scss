@@ -7,10 +7,125 @@
 
 .slider__item {
   display: none;
-  transition: transform 0.5s ease;
 }
 
-.slider__item--active {
+.slider__item--current {
   display: block;
 }
 
+
+.slider__controls {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__button {
+  position: relative;
+  width: 20px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    & .slider__button-icon {
+      fill: v.$base-grey;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    width: 80px;
+  }
+}
+
+.slider__button--next {
+  transform: rotate(180deg);
+}
+
+.slider__button-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.slider__pagination {
+  display: none;
+
+  @media (min-width: v.$desktop-width) {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    gap: 8px;
+  }
+}
+
+.slider__pagination-item {
+  position: relative;
+  width: 62px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto 0;
+    content: '';
+    height: 4px;
+    background-color: v.$base-white;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      background-color: v.$alt-primary-opacity;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: v.$base-primary;
+    }
+  }
+
+  &--current {
+    &:before {
+      background-color: v.$base-primary;
+    }
+  }
+}

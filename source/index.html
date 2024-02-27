@@ -74,7 +74,7 @@
     <section class="hero" data-test="hero">
       <h2 class="visually-hidden">Наши акционные предложения.</h2>
       <div class="hero__promo slider">
-        <div class="slider__item slide slider__item--active slide--flat-white">
+        <div class="slider__item slide slider__item--current slide--flat-white">
           <div class="slide__content">
             <div class="slide__header">
               <h3 class="slide__title">Декаф Флэт Уайт</h3>
@@ -112,7 +112,7 @@
             <div class="slide__special-offer">
               <span class="slide__old-price">295₽</span>
               <span class="slide__sppecial-price">225₽</span>
-              <button class="slide__order-btn">Заказать</button>
+              <button class="slide__order-btn button">Заказать</button>
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@
             <div class="slide__special-offer">
               <span class="slide__old-price">285₽</span>
               <span class="slide__sppecial-price">265₽</span>
-              <button class="slide__order-btn">Заказать</button>
+              <button class="slide__order-btn button">Заказать</button>
             </div>
           </div>
         </div>
@@ -194,9 +194,30 @@
             <div class="slide__special-offer">
               <span class="slide__old-price">395₽</span>
               <span class="slide__sppecial-price">375₽</span>
-              <button class="slide__order-btn">Заказать</button>
+              <button class="slide__order-btn button">Заказать</button>
             </div>
           </div>
+        </div>
+
+        <div class="slider__controls">
+          <button class="slider__button slider__button--prev slider-button-prev">
+            <svg class="slider__button-icon" width="11" height="20" fill="#7859CF" aria-hidden="true" focusable="false">
+              <use href="images/icons/stack.svg#slider-vector"></use>
+            </svg>
+            <span class="visually-hidden">кнопка к
+              прошлому слайду.</span></button>
+          <button class="slider__button slider__button--next slider-button-next">
+            <svg class="slider__button-icon" width="11" height="20" fill="#7859CF" aria-hidden="true" focusable="false">
+              <use href="images/icons/stack.svg#slider-vector"></use>
+            </svg>
+            <span class="visually-hidden">кнопка к
+              следующему слайду.</span></button>
+        </div>
+
+        <div class="slider__pagination slider-pagination">
+          <button class="slider__pagination-item slider__pagination-item--current"><span class="visually-hidden">Слайд 1.</span></button>
+          <button class="slider__pagination-item"><span class="visually-hidden">Слайд 2.</span></button>
+          <button class="slider__pagination-item"><span class="visually-hidden">Слайд 3.</span></button>
         </div>
       </div>
       <div class="hero__divider"></div>
@@ -233,7 +254,7 @@
     </section>
     <section class="catalog" data-test="catalog">
       <div class="catalog__container">
-        <header class="features__header section-header">
+        <header class="catalog__header section-header">
           <h2 class="section-header__title">Каталог кофейных напитков</h2>
           <span class="section-header__cap">Каталог</span>
         </header>
@@ -340,6 +361,7 @@
       </div>
     </div>
   </footer>
-</body>
 
+  <script type="module" src="scripts/main.js"></script>
+</body>
 </html>
