@@ -1,0 +1,63 @@
+@use "./global/variables.scss" as v;
+
+.catalog {
+  background-color: v.$lightest-grey;
+}
+
+.catalog__container {
+  width: v.$mobile-width;
+  margin: 0 auto;
+  padding: 50px 20px 44px;
+
+  @media (min-width: v.$tablet-width) {
+    width: v.$tablet-width;
+    padding: 80px 20px 90px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    width: v.$desktop-width;
+    padding: 100px 41px 120px 40px;
+  }
+}
+
+.catalog__header {
+  margin-bottom: 20px;
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 36px;
+    width: 100%;
+  }
+}
+
+.catalog__form {
+  margin-bottom: 40px;
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 60px;
+    width: 318px;
+  }
+}
+
+.catalog__products {
+  margin-bottom: 40px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 60px;
+    width: 1011px;
+  }
+}
+
+.catalog__pagination {
+  justify-content: flex-end;
+
+  @media (min-width: v.$desktop-width) {
+    width: 100%;
+  }
+}

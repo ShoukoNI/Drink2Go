@@ -1,0 +1,61 @@
+@use "./global/variables.scss" as v;
+
+.filter {
+  @media (min-width: v.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-top: 4px;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.filter__group {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: 0;
+
+  @media (min-width: v.$tablet-width) {
+    width: 223px;
+    margin-bottom: 0;
+
+    &--center {
+      width: 222px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: unset;
+    margin-bottom: 30px;
+  }
+}
+
+.filter__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}
+
+.filter__button {
+  @media (min-width: v.$desktop-width) {
+    width: 149px;
+  }
+}

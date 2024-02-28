@@ -1,0 +1,98 @@
+@use "./global/variables.scss" as v;
+
+.products__sort {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  @media (min-width: v.$tablet-width) {
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+}
+
+.products__sort-label {
+  padding: 4px 0 4px 3px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  flex-shrink: 0;
+}
+
+.products__sort-select {
+  position: relative;
+  width: 162px;
+  height: 32px;
+  padding: 4px 27px 4px 10px;
+  flex-shrink: 0;
+  font-family: v.$main-font;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: v.$base-primary;
+  border: none;
+  border-radius: 4px;
+  appearance: none;
+  background-color: transparent;
+  background-image: url('../../images/icons/stack.svg#select-vector-default');
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-position: right 7px center;
+
+  &:hover,
+  &:focus {
+    background-color: v.$base-secondary;
+    outline: none;
+  }
+
+  &:active {
+    background-color: transparent;
+    background-image: url('../../images/icons/stack.svg#select-vector-active');
+  }
+
+  & option {
+    font-family: v.$main-font;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    width: 165px;
+    padding: 4px 30px 4px 10px;
+    background-position: right 10px center;
+  }
+}
+
+.products__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: v.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 349px);
+    gap: 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    grid-template-columns: repeat(auto-fit, 317px);
+  }
+}
+
+.products__item {
+  min-height: 420px;
+
+  @media (min-width: v.$tablet-width) {
+    min-height: 440px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    min-height: 460px;
+  }
+}

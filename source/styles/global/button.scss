@@ -14,14 +14,37 @@
 
   &:hover,
   &:focus-visible {
+    outline: none;
+    color: v.$base-white;
     background-color: v.$alt-primary-lighter;
   }
 
   &:active {
+    color: v.$base-white;
     background-color: v.$alt-primary-darker;
   }
 
   &:disabled {
     background-color: v.$base-grey;
+  }
+
+  &--reset {
+    color: v.$base-primary;
+    background-color: v.$base-white;
+
+    &:disabled {
+      color: v.$base-white;
+      background-color: v.$alt-ligh-grey;
+    }
+  }
+
+  &--shopping-cart {
+    padding-left: 46px;
+    font-size: 14px;
+    line-height: 20px;
+    background-image: url('../../images/icons/stack.svg#shopping-cart-white');
+    background-size: 20px 16px;
+    background-repeat: no-repeat;
+    background-position: left 20px center;
   }
 }

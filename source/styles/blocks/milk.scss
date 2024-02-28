@@ -1,0 +1,97 @@
+@use "./global/variables.scss" as v;
+
+.milk__headline {
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.milk__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.milk__control {
+  display: flex;
+}
+
+.milk__control-label {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.milk__control-input {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin: 0;
+  margin-right: 10px;
+  appearance: none;
+  border: 2px solid v.$base-grey;
+  border-radius: 50%;
+  background-color: v.$base-white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid v.$alt-primary-lighter;
+    outline-offset: -2px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: "";
+      background-color: v.$alt-primary-opacity;
+      border-radius: 50%;
+    }
+  }
+
+  &:checked {
+    border: 2px solid v.$base-primary;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: "";
+      background-color: v.$base-primary;
+      border-radius: 50%;
+    }
+  }
+}
+
+.milk__control-input:disabled {
+  pointer-events: none;
+  border: 2px solid v.$alt-ligh-grey;
+
+  &+.milk__control-label {
+    pointer-events: none;
+    color: v.$base-grey;
+  }
+}
+
+.milk__control-input:checked:disabled {
+  &::after {
+    background-color: v.$alt-ligh-grey;
+  }
+}
