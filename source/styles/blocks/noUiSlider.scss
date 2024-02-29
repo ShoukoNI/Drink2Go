@@ -1,0 +1,82 @@
+@use "./global/variables.scss" as v;
+
+.price__slider-wrapper {
+  position: relative;
+}
+
+.price__slider-wrapper .noUi-target {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border-radius: unset;
+  border: none;
+  box-shadow: none;
+  height: 2px;
+  background-color: v.$alt-ligh-grey;
+
+  & .noUi-connects {
+    overflow: visible;
+    border-radius: uset;
+  }
+
+  & .noUi-connect {
+    margin: auto 0;
+    bottom: 0;
+    height: 4px;
+    background: v.$alt-primary-lighter;
+  }
+
+  & .noUi-handle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: v.$alt-primary-lighter;
+    border: none;
+    box-shadow: none;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: v.$base-white;
+    }
+
+    &:hover {
+      &::after {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: v.$alt-primary-opacity;
+      }
+    }
+
+    &:active {
+      &::after {
+        background-color: v.$base-primary;
+      }
+    }
+  }
+}

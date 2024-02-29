@@ -84,7 +84,7 @@
   pointer-events: none;
   border: 2px solid v.$alt-ligh-grey;
 
-  &+.milk__control-label {
+  & + .milk__control-label {
     pointer-events: none;
     color: v.$base-grey;
   }

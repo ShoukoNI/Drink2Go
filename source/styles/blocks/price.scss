@@ -26,10 +26,10 @@
   align-items: center;
   gap: 18px;
 
-  &:before {
+  &::before {
     width: 8px;
     height: 2px;
-    content: '';
+    content: "";
     background-color: v.$base-grey;
     order: 1;
   }
@@ -39,7 +39,7 @@
   }
 
   @media (min-width: v.$desktop-width) {
-    &:before {
+    &::before {
       width: 10px;
     }
   }

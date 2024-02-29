@@ -71,7 +71,7 @@
     margin: 0 auto;
     height: 56px;
     width: 52px;
-    content: '';
+    content: "";
     background-position: center;
   }
 
@@ -91,14 +91,14 @@
 
     &::before {
       right: 0;
-      margin: 0 auto
+      margin: 0 auto;
     }
   }
 }
 
 .features__item--stopwatch {
   &::before {
-    background-image: url('../../images/icons/stack.svg#stopwatch');
+    background-image: url("../../images/icons/stack.svg#stopwatch");
   }
 
   @media (min-width: v.$tablet-width) {
@@ -116,19 +116,19 @@
 
 .features__item--pocket {
   &::before {
-    background-image: url('../../images/icons/stack.svg#pocket');
+    background-image: url("../../images/icons/stack.svg#pocket");
   }
 }
 
 .features__item--lightning {
   &::before {
-    background-image: url('../../images/icons/stack.svg#lightning');
+    background-image: url("../../images/icons/stack.svg#lightning");
   }
 }
 
 .features__item--leaf {
   &::before {
-    background-image: url('../../images/icons/stack.svg#leaf');
+    background-image: url("../../images/icons/stack.svg#leaf");
   }
 
   @media (min-width: v.$tablet-width) {

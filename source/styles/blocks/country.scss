@@ -50,7 +50,6 @@
     content: "";
     background-color: v.$base-white;
     border-radius: 50%;
-
   }
 
   &:hover,
@@ -78,7 +77,7 @@
     background-color: v.$lightest-grey;
   }
 
-  &+.country__control-label {
+  & + .country__control-label {
     pointer-events: none;
     color: v.$base-grey;
   }
